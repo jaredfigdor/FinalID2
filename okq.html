@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+
+</script>
+<script src="jquery-3.6.0.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+.main img{
+
+}
+
+
+
+.location img {
+  width: 50px;	
+  height: 30px;
+  position: absolute;
+  margin-top: 20px;
+  padding-right: 20px;
+  
+    top: 20px;
+    right: 0px;
+}
+
+.home img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+
+    top: 20px;
+    left: 0px;
+}
+
+
+
+h2 img{
+  width: 30%;
+    max-width: 200px;
+  
+}
+
+h2{
+  text-align: center;
+  margin-top: 0px;
+   margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.title{
+  text-align: center;
+  padding-bottom: 20px;
+
+
+}
+.search{
+ text-align: center;
+  padding-bottom: 10px;
+}
+
+input{
+  width: 30%;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+h1{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+   input  {
+    width: 75%;
+
+  
+   /* The width is 100%, when the viewport is 800px or smaller */
+  }
+    h2 img{
+    padding-top:24px ;
+  }
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (min-width: 800px) {
+   .home img  {
+    left: 31%;
+
+  
+   /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .location img{
+    right: 31%;
+  }
+
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 40px;
+
+}
+.lds-ellipsis div {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #828282;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+hr {
+   width: 100%;
+   height: 2px;
+   margin-right: auto;
+   margin-left: auto;
+   background-color:#666;
+   margin-top: 30px;
+
+}
+.boxes{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 350px;
+ 
+
+}
+
+.box{
+  border: 1px solid black ;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+}
+
+.gWrapper{
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding-bottom: 20px;
+ 
+
+}
+
+
+.result{
+ margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+ font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  padding-top: 30px;
+
+}
+
+
+
+.colorbar{
+
+  width: 10%;
+
+}
+
+.textbar{
+width: 55%;
+stroke: 1px;
+
+
+   font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: auto;
+margin-bottom: auto;
+padding-bottom: 4px;
+
+
+
+}
+
+.tbar{
+  width:35%;
+  font-family: 'Oswald', sans-serif;
+font-size: 1.2rem;
+ font-weight: 300; 
+border-left: 1px solid black ;
+text-align: center;
+  padding-top: 13px;
+
+}
+
+
+
+
+.boxone .colorbar{
+background-color: #b5b300;
+border-right: 1px solid black;
+}
+
+.boxtwo .colorbar{
+background-color: #aab500;
+border-right: 1px solid black;
+}
+
+.boxthree .colorbar{
+background-color: #c0af1b;
+border-right: 1px solid black;
+}
+
+.boxfour .colorbar{
+background-color: #9cbb1f;
+border-right: 1px solid black;
+}
+
+.boxfive .colorbar{
+background-color: #aab500;
+border-right: 1px solid black;
+}
+
+
+
+.bottomContent{
+  overflow: auto;
+}
+
+.line{
+  padding-bottom: 15px;
+}
+
+.key{
+     font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+padding-left: 10px;
+
+}
+
+.outcome{
+  color: #c24800 ;
+}
+
+
+.ok{
+
+  font-size: 20px;
+}
+
+.only{
+
+  font-weight: 500;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="gWrapper">
+    <div class="topContent">
+
+        <h2><img src="img/Hydr8.png" alt="logo"></h2>
+        <div class= "search">
+        <input type="text" name="user" placeholder="New York, New York, 10003">
+        </div>
+        <div class="title">
+        <h1>Water Quality</h1>
+        </div>
+
+        <div class="location">
+          <a href="map.html"><img src="img/location.png" onmouseover="this.src='img/location_r.png'" onmouseout="this.src='img/location.png'"/></a>
+        </div>
+        <div class="home">
+          <a href="index.html"><img src="img/home_r.png" onmouseover="this.src='img/home_r.png'" onmouseout="this.src='img/home.png'"/></a>
+        </div>
+
+        <div class="main">
+          <img src="img/warning.png" width = "80" height = "70">
+
+	
+  
+    </div>
+        <div class="result">
+      Consume Tap <span class="only">ONLY</span> if Necessary<br><span class="ok">(no bottled or purified water available)</span>
+      </div>
+    <div class="line">
+          <hr/>
+        </div>
+      
+  </div>
+    <div class="bottomContent">
+        <div class="key">
+          <div class="left">
+            Contaminants&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tolerance(ppm)
+          </div>
+        </div>
+
+        <div class="boxes">
+         
+          <div class="boxone box">
+            <div class="colorbar"></div>
+            <div class="textbar">
+              Iron (Fe) : &nbsp;&nbsp;&nbsp; 56
+            </div>
+            <div class="tbar">
+              (2-30)
+            </div>
+          </div>
+
+          <div class="boxtwo box">
+            <div class="colorbar"></div>
+            <div class="textbar">
+              Lead (Pb) : &nbsp;&nbsp;&nbsp;6
+            </div>
+					<div class="tbar">
+              (0-4)
+            </div>
+          </div>
+
+          <div class="boxthree box">
+            <div class="colorbar"></div>
+            <div class="textbar">
+              Flouride : &nbsp;&nbsp;&nbsp;36
+            </div>
+					<div class="tbar">
+              (5-40)
+            </div>
+          </div>
+
+          <div class="boxfour box">
+            <div class="colorbar"></div>
+            <div class="textbar">
+              Nitrates : &nbsp;&nbsp;&nbsp;9
+            </div>
+					<div class="tbar">
+              (2-10)
+            </div>
+          </div>
+
+
+             <div class="boxfive box">
+            <div class="colorbar"></div>
+            <div class="textbar">
+              Copper : &nbsp;&nbsp;&nbsp;8
+            </div>
+          <div class="tbar">
+              (0-30)
+            </div>
+          </div>
+
+       
+
+
+        </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
